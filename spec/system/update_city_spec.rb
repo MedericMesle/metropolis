@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Updating a city', type: :system do
-  scenario 'valid inputs' do
+  scenario 'Updating a city' do
     nyc = City.create!(name: 'NYC')
     visit edit_city_path(id: nyc.id)
     fill_in 'Name', with: "New York City"
